@@ -43,7 +43,7 @@ class stock_move(orm.Model):
     }
 
     def action_scrap(self, cr, uid, ids,
-        product_qty, location_id, context=None):
+        product_qty, location_id, restrict_lot_id=False, restrict_partner_id=False, context=None):
         """ Move the scrap/damaged product into scrap location
         @param product_qty: Scraped product quantity
         @param location_id: Scrap location
@@ -51,7 +51,7 @@ class stock_move(orm.Model):
         """  
         res = super(stock_move, self).\
             action_scrap(cr, uid, ids, product_qty,
-                         location_id, context=context)
+                         location_id, restrict_lot_id=restrict_lot_id, restrict_partner_id=restrict_partner_id, context=context)
         if context.get('reason'):
             reason = context.get('reason')
             notes_reason = context.get('notes_reason') or False
