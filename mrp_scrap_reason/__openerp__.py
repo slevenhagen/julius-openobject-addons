@@ -22,7 +22,7 @@
 {
     "name" : "MRP Scrap Reason",
     "version" : "0.1",
-    "author" : "Julius Network Solutions",
+    "author" : "Julius Network Solutions , Novapoint Group INC (Ruby Chauhan)",
     "website" : "http://julius.fr",
     "category" : "Manufacturing",
     "depends" : [
@@ -39,7 +39,7 @@
         "mrp_view.xml",
         "stock_view.xml",
     ],
-    'installable' : False,
+    'installable' : True,
     'active' : False,
 }
 
